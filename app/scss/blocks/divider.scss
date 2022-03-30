@@ -1,0 +1,5 @@
+@import "../mixins";
+
+.divider {
+  @include divider();
+}

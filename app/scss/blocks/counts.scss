@@ -1,0 +1,96 @@
+@import "../vars";
+
+.counts {
+  background: url('../img/@2x/counts-bg.jpg') center no-repeat;
+  background-size: cover;
+  padding: 120px 0 110px;
+  position: relative;
+
+  &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      background:rgba(0,0,0,.8);
+  }
+
+  .counts__block {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+  }
+
+  .counts__element {
+      flex-basis: 20%;
+      text-align: center;
+      margin: 20px 0;
+
+      .counts__circle {
+          width: 109px;
+          height: 109px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          margin: 0 auto;
+          position: relative;
+
+          i {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              color: $white;
+              font-size: 33px;
+          }
+      }
+
+      p {
+          color: $white-gray;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.9px;
+          margin: 10px 0;
+      }
+
+      .counts__number {
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          font-size: 30px;
+      }
+  }
+}
+
+@media (max-width: 980px) {
+
+  .counts {
+      padding: 50px 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .counts__block {
+      justify-content: center;
+  }
+
+  .counts__element {
+      flex-basis: 45%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .counts {
+
+      .counts__element {
+          flex-basis: 100%;
+      }
+  }
+
+}
